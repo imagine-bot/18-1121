@@ -8,7 +8,7 @@ const users = [
 ];
 
 const UsersPage = () => (
-  <div>
+  <div className="flex items-center justify-center h-screen">
     <h1>Users</h1>
     <UserTable users={users} />
   </div>
