@@ -12,24 +12,26 @@ type UserTableProps = {
 };
 
 const UserTable: React.FC<UserTableProps> = ({ users }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Phone</th>
-      </tr>
-    </thead>
-    <tbody>
-      {users.map((user) => (
-        <tr key={user.name}>
-          <td>{user.name}</td>
-          <td>{user.address}</td>
-          <td>{user.phone}</td>
+  <div className="card border hover:border-blue-500">
+    <table className="table-auto mx-auto">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
         </tr>
-      ))}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {users.map((user) => (
+          <tr key={user.name}>
+            <td>{user.name}</td>
+            <td>{user.address}</td>
+            <td>{user.phone}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
 );
 
 export default UserTable;
